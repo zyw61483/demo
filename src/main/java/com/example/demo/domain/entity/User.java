@@ -1,6 +1,6 @@
 package com.example.demo.domain.entity;
 
-import com.example.demo.domain.demo_enum.Role;
+import com.example.demo.domain.demo_enum.RoleEnum;
 import lombok.Data;
 
 import javax.persistence.Entity;
@@ -18,9 +18,10 @@ public class User {
     @GeneratedValue
     private long id;
     private String name;
+    private String pwd;
     private String phone;
     private Date creatTime;
-    private Role role;
+    private RoleEnum role;
     private String province;
     private String city;
     private String address;

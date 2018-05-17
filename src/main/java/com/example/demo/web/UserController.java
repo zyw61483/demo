@@ -1,6 +1,7 @@
 package com.example.demo.web;
 
-import com.example.demo.domain.demo_enum.Role;
+import com.example.demo.domain.demo_enum.RoleEnum;
+import com.example.demo.domain.dto.Result;
 import com.example.demo.domain.entity.User;
 import com.example.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,12 +30,18 @@ public class UserController {
 	public ResponseEntity addUser (@RequestParam(name = "phone") String phone){
 		User user = new User();
 		user.setPhone(phone);
+		user.setPwd(phone);
 		user.setName(phone);
 		user.setCreatTime(new Date());
-		user.setRole(Role.CUSTOMER);
+		user.setRole(RoleEnum.CUSTOMER);
 		user = userService.addUser(user);
 		return ResponseEntity.ok(user);
 	}
+
+	@RequestMapping(value = "user/login",method = RequestMethod.POST)
+    public ResponseEntity<Result> login(String phone){
+	    return userService.login(phone);
+    }
 
 	@ApiIgnore//使用该注解忽略这个API
 	@RequestMapping(value = "/hi", method = RequestMethod.GET)
