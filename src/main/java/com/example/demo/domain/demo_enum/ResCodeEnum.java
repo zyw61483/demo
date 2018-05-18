@@ -1,5 +1,7 @@
 package com.example.demo.domain.demo_enum;
 
+import lombok.Data;
+
 /**
  * @author zhaoyiwei 2018/5/17 20:01
  */
@@ -12,5 +14,9 @@ public enum ResCodeEnum {
     ResCodeEnum(String code, String msg) {
         this.code = code;
         this.msg = msg;
+    }
+
+    public String getMsg(){
+        return msg;
     }
 }

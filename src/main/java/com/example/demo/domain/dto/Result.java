@@ -10,4 +10,9 @@ import lombok.Data;
 public class Result {
     private ResCodeEnum ResCode;
     private String ResMsg;
+
+    public void setResCode(ResCodeEnum resCode) {
+        ResCode = resCode;
+        ResMsg = resCode.getMsg();
+    }
 }

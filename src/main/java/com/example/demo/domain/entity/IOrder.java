@@ -1,9 +1,11 @@
 package com.example.demo.domain.entity;
 
-import com.example.demo.domain.demo_enum.OrderStatus;
+import com.example.demo.domain.demo_enum.OrderStatusEnum;
 import lombok.Data;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.util.Date;
 
 /**
@@ -19,6 +21,6 @@ public class IOrder {
     private long product_id;
     private Date creatTime;
     private String product_count;
-    private OrderStatus status;
+    private OrderStatusEnum status;
 
 }
