@@ -36,9 +36,9 @@ public class UserServiceImpl implements UserService {
         Result result = new Result();
         User user = userRepository.findUserByPhoneAndPwd(phone, EncryptUtil.getEncString(phone, EncryptUtil.KEY));
         if(user!=null){
-            result.setResCode(ResCodeEnum.FAIL);
-        }else{
             result.setResCode(ResCodeEnum.SUCCESS);
+        }else{
+            result.setResCode(ResCodeEnum.FAIL);
         }
         return new ResponseEntity(result, HttpStatus.OK);
     }
