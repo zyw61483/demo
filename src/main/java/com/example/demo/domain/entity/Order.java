@@ -4,22 +4,17 @@ import com.example.demo.domain.demo_enum.OrderStatusEnum;
 import lombok.Data;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import java.util.Date;
+import javax.persistence.Table;
 
 /**
  * @author zhaoyiwei 2018/5/10 14:45
  */
 @Data
 @Entity
-public class IOrder {
-    @Id
-    @GeneratedValue
-    private long id;
+@Table(name = "iorder")
+public class Order extends BaseEntity {
     private long user_id;
     private long product_id;
-    private Date creatTime;
     private String product_count;
     private OrderStatusEnum status;
 

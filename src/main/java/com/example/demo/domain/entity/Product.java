@@ -12,16 +12,11 @@ import java.util.Date;
  */
 @Data
 @Entity
-public class Product {
-    @Id
-    @GeneratedValue
-    private long id;
+public class Product extends BaseEntity{
     private String name;
     private String type;
     private String count;
     private String price;
     private String des;
-    private Date creatTime;
-
 
 }

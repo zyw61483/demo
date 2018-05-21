@@ -11,10 +11,7 @@ import javax.persistence.Id;
  */
 @Data
 @Entity
-public class ShoppingCar {
-    @Id
-    @GeneratedValue
-    private long id;
+public class ShoppingCar extends BaseEntity {
     private long user_id;
     private long product_id;
     private String product_count;
