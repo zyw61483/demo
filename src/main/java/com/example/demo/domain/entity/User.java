@@ -1,5 +1,6 @@
 package com.example.demo.domain.entity;
 
+import com.example.demo.domain.demo_enum.OriginEnum;
 import com.example.demo.domain.demo_enum.RoleEnum;
 import lombok.Data;
 
@@ -17,6 +18,8 @@ public class User {
     @Id
     @GeneratedValue
     private long id;
+    private String openId;
+    private OriginEnum origin;
     private String name;
     private String pwd;
     private String phone;

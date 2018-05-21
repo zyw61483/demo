@@ -7,8 +7,9 @@ import org.springframework.data.repository.CrudRepository;
  * @author zhaoyiwei 2018/5/10 15:38
  */
 public interface UserRepository extends CrudRepository<User, Long> {
-    public User findUserById(Long id);
+    User findUserById(Long id);
 
-    public User findUserByPhoneAndPwd(String phone,String pwd);
+    User findUserByPhoneAndPwd(String phone, String pwd);
 
+    User findUserByOpenId(String openId);
 }

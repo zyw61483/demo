@@ -14,4 +14,6 @@ public interface UserService {
     User addUser(User user);
 
     ResponseEntity<Result> login(String phone);
+
+    ResponseEntity<Result> updateUser(User user);
 }
