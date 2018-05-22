@@ -5,6 +5,7 @@ import lombok.Data;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import java.math.BigDecimal;
 import java.util.Date;
 
 /**
@@ -15,8 +16,8 @@ import java.util.Date;
 public class Product extends BaseEntity{
     private String name;
     private String type;
-    private String count;
-    private String price;
+    private int count;
+    private BigDecimal price;
     private String des;
 
 }
