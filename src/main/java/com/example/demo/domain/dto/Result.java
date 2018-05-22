@@ -8,6 +8,7 @@ import lombok.Data;
  */
 @Data
 public class Result {
+    public static final Integer PAGECOUNT = 10;
     private ResCodeEnum ResCode;
     private String ResMsg;
 

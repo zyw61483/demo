@@ -30,7 +30,6 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User addUser(User user) {
-        user.setCreatTime(new Date());
         user.setPwd(EncryptUtil.getEncString(user.getPhone(),EncryptUtil.KEY));
         return userRepository.save(user);
     }
