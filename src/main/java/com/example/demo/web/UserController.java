@@ -4,13 +4,14 @@ import com.example.demo.domain.demo_enum.RoleEnum;
 import com.example.demo.domain.dto.Result;
 import com.example.demo.domain.entity.User;
 import com.example.demo.service.UserService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import springfox.documentation.annotations.ApiIgnore;
 
 import java.util.Date;
-
+@Slf4j
 @RestController
 public class UserController {
 
@@ -35,7 +36,7 @@ public class UserController {
 		return ResponseEntity.ok(user);
 	}
 
-    @RequestMapping(value = "user/add", method = RequestMethod.POST)
+    @RequestMapping(value = "user/update", method = RequestMethod.POST)
     public ResponseEntity updateUser (@RequestBody User user){
         return userService.updateUser(user);
     }
