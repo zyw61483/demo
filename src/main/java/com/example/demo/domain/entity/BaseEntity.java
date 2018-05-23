@@ -25,4 +25,7 @@ public abstract class BaseEntity {
     @Transient
     private Integer pageNo;
 
+    public void setPageNo(Integer pageNo) {
+        this.pageNo = pageNo-1<0?0:pageNo-1;
+    }
 }

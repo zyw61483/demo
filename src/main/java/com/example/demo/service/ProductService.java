@@ -1,5 +1,6 @@
 package com.example.demo.service;
 
+import com.example.demo.domain.dto.Result;
 import com.example.demo.domain.entity.Product;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
@@ -13,4 +14,6 @@ public interface ProductService {
     ResponseEntity delProduct(Long productId);
 
     ResponseEntity getProducts(Product product, Pageable pageable);
+
+    Result updateProduct(Product product);
 }

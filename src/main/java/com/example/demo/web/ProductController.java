@@ -21,12 +21,19 @@ public class ProductController {
 
     @RequestMapping(value = "product/getProducts", method = RequestMethod.POST)
     public ResponseEntity getProducts (@RequestBody Product product){
-        return productService.getProducts(product,PageRequest.of(product.getPageNo(), Result.PAGECOUNT, new Sort(Sort.Direction.DESC)));
+        PageRequest pageRequest = PageRequest.of(product.getPageNo(), Result.PAGECOUNT, new Sort(Sort.Direction.DESC,"modifiedDate"));
+        return productService.getProducts(product,pageRequest);
     }
 
 	@RequestMapping(value = "product/addProduct", method = RequestMethod.POST)
 	public ResponseEntity addProduct (@RequestBody Product product){
 		return productService.addProduct(product);
+    }
+
+    @RequestMapping(value = "product/updateProduct", method = RequestMethod.POST)
+    public ResponseEntity updateProduct (@RequestBody Product product){
+        Result result = productService.updateProduct(product);
+        return ResponseEntity.ok(result);
     }
 
     @RequestMapping(value = "product/delProduct", method = RequestMethod.POST)
