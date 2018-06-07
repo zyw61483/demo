@@ -1,6 +1,6 @@
 package com.example.demo.web;
 
-import com.example.demo.domain.demo_enum.RoleEnum;
+import com.example.demo.domain.enums.RoleEnum;
 import com.example.demo.domain.dto.Result;
 import com.example.demo.domain.entity.User;
 import com.example.demo.service.UserService;

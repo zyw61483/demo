@@ -1,6 +1,6 @@
 package com.example.demo.service.impl;
 
-import com.example.demo.domain.demo_enum.ResCodeEnum;
+import com.example.demo.domain.enums.ResCodeEnum;
 import com.example.demo.domain.dto.Result;
 import com.example.demo.domain.entity.User;
 import com.example.demo.repository.UserRepository;
@@ -8,11 +8,8 @@ import com.example.demo.service.UserService;
 import com.example.demo.util.EncryptUtil;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-
-import java.util.Date;
 
 /**
  * @author zhaoyiwei 2018/5/10 14:55

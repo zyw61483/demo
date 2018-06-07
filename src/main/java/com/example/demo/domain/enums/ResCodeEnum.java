@@ -1,6 +1,4 @@
-package com.example.demo.domain.demo_enum;
-
-import lombok.Data;
+package com.example.demo.domain.enums;
 
 /**
  * @author zhaoyiwei 2018/5/17 20:01

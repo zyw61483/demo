@@ -1,6 +1,6 @@
 package com.example.demo.domain.entity;
 
-import com.example.demo.domain.demo_enum.OrderStatusEnum;
+import com.example.demo.domain.enums.OrderStatusEnum;
 import lombok.Data;
 
 import javax.persistence.Entity;

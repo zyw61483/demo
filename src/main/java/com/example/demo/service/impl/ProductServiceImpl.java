@@ -1,6 +1,6 @@
 package com.example.demo.service.impl;
 
-import com.example.demo.domain.demo_enum.ResCodeEnum;
+import com.example.demo.domain.enums.ResCodeEnum;
 import com.example.demo.domain.dto.Result;
 import com.example.demo.domain.entity.Product;
 import com.example.demo.repository.ProductRepository;

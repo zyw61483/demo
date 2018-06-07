@@ -1,6 +1,6 @@
 package com.example.demo.domain.dto;
 
-import com.example.demo.domain.demo_enum.ResCodeEnum;
+import com.example.demo.domain.enums.ResCodeEnum;
 import lombok.Data;
 
 /**
