@@ -13,9 +13,14 @@ import org.springframework.web.servlet.ModelAndView;
 public class CommonController {
 
     @RequestMapping("/")
-    public ModelAndView index(String name){
+    public ModelAndView index(String name) {
         ModelAndView mv = new ModelAndView("index");
-        mv.addObject("name",name);
+        mv.addObject("name", name);
         return mv;
+    }
+
+    @RequestMapping("/main")
+    public ModelAndView main() {
+        return new ModelAndView("main");
     }
 }
