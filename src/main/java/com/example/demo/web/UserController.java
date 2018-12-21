@@ -18,7 +18,7 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 
-	@RequestMapping(value = "user/getUserById", method = RequestMethod.POST)
+	@RequestMapping(value = "user/getUserById")
 	public ResponseEntity getUserById (Long id){
 		User u = userService.getUserById(id);
 		return ResponseEntity.ok(u);
@@ -41,7 +41,7 @@ public class UserController {
         return userService.updateUser(user);
     }
 
-	@RequestMapping(value = "user/login",method = RequestMethod.POST)
+	@RequestMapping(value = "user/login")
     public ResponseEntity<Result> login(String phone){
 	    return userService.login(phone);
     }

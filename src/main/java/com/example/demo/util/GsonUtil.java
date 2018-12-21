@@ -27,7 +27,7 @@ public class GsonUtil {
         Gson gson = builder.create();
         String result = EMPTY_JSON;
         try {
-                result = gson.toJson(target);
+            result = gson.toJson(target);
         } catch (Exception ex) {
             log.warn("目标对象转换为json异常 errMessage{}", ex.getMessage(), ex);
             if (target instanceof Collection<?> || target instanceof Iterator<?> || target instanceof Enumeration<?>

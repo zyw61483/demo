@@ -19,7 +19,7 @@ public class ProductController {
 	@Autowired
 	private ProductService productService;
 
-    @RequestMapping(value = "product/getProducts", method = RequestMethod.POST)
+    @RequestMapping(value = "product/getProducts")
     public ResponseEntity getProducts (@RequestBody Product product){
         PageRequest pageRequest = PageRequest.of(product.getPageNo(), Result.PAGECOUNT, new Sort(Sort.Direction.DESC,"modifiedDate"));
         return productService.getProducts(product,pageRequest);
