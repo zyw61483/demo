@@ -30,8 +30,6 @@ public class UserController {
 		user.setPhone(phone);
 		user.setPwd(phone);
 		user.setName(phone);
-		user.setCreatTime(new Date());
-		user.setRole(RoleEnum.CUSTOMER);
 		user = userService.addUser(user);
 		return ResponseEntity.ok(user);
 	}

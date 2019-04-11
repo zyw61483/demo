@@ -17,16 +17,17 @@ import java.util.Date;
 public abstract class BaseEntity {
     @Id
     @GeneratedValue
-    protected Long id;
+    @Column(columnDefinition = "int(16) COMMENT '主键'")
+    protected Long  id;
     @CreatedDate
-    private Date creatTime;
+    private Date createdTime;
     @LastModifiedDate
-    private Date modifiedDate;
+    private Date modifiedTime;
     @Transient
     private Integer pageNo;
 
     public void setPageNo(Integer pageNo) {
-        if(pageNo!=null)
-            this.pageNo = pageNo-1<0?0:pageNo-1;
+        if (pageNo != null)
+            this.pageNo = pageNo - 1 < 0 ? 0 : pageNo - 1;
     }
 }
